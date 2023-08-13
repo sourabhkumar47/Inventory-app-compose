@@ -88,34 +88,28 @@ fun HomeScreen(
                 scrollBehavior = scrollBehavior
             )
         },
+//
+//        bottomBar = {
+//            BottomAppBar() {
+//                IconButton(onClick = { /*TODO*/ }) {
+//                    Icon(Icons.Filled.Menu, contentDescription = null)
+//                }
+//            }
+//
+//        },
 
-        bottomBar = {
-            BottomAppBar() {
-                FloatingActionButton(
-                    onClick = navigateToItemEntry,
-                    shape = MaterialTheme.shapes.extraSmall,
-                    modifier = Modifier.padding(dimensionResource(id = R.dimen.padding_small))
-                ) {
-                    Icon(
-                        imageVector = Icons.Default.Add,
-                        contentDescription = stringResource(R.string.item_entry_title)
-                    )
-                }
+        floatingActionButton = {
+            FloatingActionButton(
+                onClick = navigateToItemEntry,
+                shape = MaterialTheme.shapes.medium,
+                modifier = Modifier.padding(dimensionResource(id = R.dimen.padding_large))
+            ) {
+                Icon(
+                    imageVector = Icons.Default.Add,
+                    contentDescription = stringResource(R.string.item_entry_title)
+                )
             }
         },
-
-//        floatingActionButton = {
-//            FloatingActionButton(
-//                onClick = navigateToItemEntry,
-//                shape = MaterialTheme.shapes.medium,
-//                modifier = Modifier.padding(dimensionResource(id = R.dimen.padding_large))
-//            ) {
-//                Icon(
-//                    imageVector = Icons.Default.Add,
-//                    contentDescription = stringResource(R.string.item_entry_title)
-//                )
-//            }
-//        },
     ) { innerPadding ->
         HomeBody(
             itemList = listOf(),
@@ -171,7 +165,7 @@ private fun InventoryItem(
 ) {
     Card(
         modifier = modifier,
-        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = 20.dp)
     ) {
         Column(
             modifier = Modifier.padding(dimensionResource(id = R.dimen.padding_large)),
