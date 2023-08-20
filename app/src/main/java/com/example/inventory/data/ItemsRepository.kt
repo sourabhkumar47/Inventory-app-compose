@@ -23,10 +23,12 @@ import kotlinx.coroutines.flow.Flow
 interface ItemsRepository {
 
     //Retrieve all the data for the given data source
-    fun getAllItemStream():Flow<List<Item>>
+    fun getAllItemsStream(): Flow<List<Item>>
 
-    //Retrieve an item from the given data source that matches with the [id].
-    fun getItemStream(id:Item):Flow<Item?>
+    /**
+     * Retrieve an item from the given data source that matches with the [id].
+     */
+    fun getItemStream(id: Int): Flow<Item?>
 
     //Insert item in data source
     suspend fun insertItem(item: Item)
