@@ -13,7 +13,6 @@ import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 import java.io.IOException
-import kotlin.jvm.Throws
 
 @RunWith(AndroidJUnit4::class)
 class ItemDaoTest {
@@ -21,9 +20,9 @@ class ItemDaoTest {
     private lateinit var inventoryDatabase: InventoryDatabase
 
     @Before
-    fun createDb(){
-        val context : Context = ApplicationProvider.getApplicationContext()
-        inventoryDatabase = Room.inMemoryDatabaseBuilder(context,InventoryDatabase::class.java)
+    fun createDb() {
+        val context: Context = ApplicationProvider.getApplicationContext()
+        inventoryDatabase = Room.inMemoryDatabaseBuilder(context, InventoryDatabase::class.java)
             .allowMainThreadQueries()
             .build()
         itemDao = inventoryDatabase.itemDao()
@@ -31,7 +30,7 @@ class ItemDaoTest {
 
     @After
     @Throws(IOException::class)
-    fun closeDb(){
+    fun closeDb() {
         inventoryDatabase.close()
     }
 
@@ -61,5 +60,19 @@ class ItemDaoTest {
         val allItems = itemDao.getAllItems().first()
         assertEquals(allItems[0], item1)
         assertEquals(allItems[1], item2)
+    }
+
+    @Test
+    @Throws(Exception::class)
+    fun daoUpdateItems_updatesItemsInDB() = runBlocking {
+        addTwoItemsToDb()
+
+        itemDao.update(Item(1, "Apples", 15.0, 25))
+        itemDao.update(Item(2, "Bananas", 5.0, 50))
+
+        val allItems = itemDao.getAllItems().first()
+        assertEquals(allItems[0], Item(1, "Apples", 15.0, 25))
+        assertEquals(allItems[1], Item(2, "Bananas", 5.0, 50))
+
     }
 }
