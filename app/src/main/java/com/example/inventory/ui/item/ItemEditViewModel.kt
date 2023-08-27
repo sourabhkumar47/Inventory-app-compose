@@ -54,6 +54,12 @@ class ItemEditViewModel(
 
     }
 
+    suspend fun updateItem() {
+        if (validateInput(itemUiState.itemDetails)){
+            itemsRepository.updateItem(itemUiState.itemDetails.toItem())
+        }
+    }
+
     init {
         viewModelScope.launch {
             itemUiState = itemsRepository.getItemStream(itemId)
