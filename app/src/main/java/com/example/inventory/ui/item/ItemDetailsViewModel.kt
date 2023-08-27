@@ -52,6 +52,7 @@ class ItemDetailsViewModel(
                 initialValue = ItemDetailsUiState()
             )
 
+    //Fun to sell item
     fun reduceQuantityByOne() {
         viewModelScope.launch {
             val currentItem = uiState.value.itemDetails.toItem()
@@ -60,6 +61,13 @@ class ItemDetailsViewModel(
             }
         }
     }
+
+
+    //Fun to delete item
+    suspend fun deleteItem(){
+        itemsRepository.deleteItem(uiState.value.itemDetails.toItem())
+    }
+
 }
 
 /**
