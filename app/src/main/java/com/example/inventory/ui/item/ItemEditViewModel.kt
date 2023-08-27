@@ -49,6 +49,11 @@ class ItemEditViewModel(
         }
     }
 
+    fun updateUiState(itemDetails: ItemDetails) {
+        itemUiState = ItemUiState(itemDetails, isEntryValid = validateInput(itemDetails))
+
+    }
+
     init {
         viewModelScope.launch {
             itemUiState = itemsRepository.getItemStream(itemId)

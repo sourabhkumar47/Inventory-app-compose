@@ -57,7 +57,7 @@ fun ItemEditScreen(
     ) { innerPadding ->
         ItemEntryBody(
             itemUiState = viewModel.itemUiState,
-            onItemValueChange = { },
+            onItemValueChange = viewModel::updateUiState,
             onSaveClick = { },
             modifier = Modifier.padding(innerPadding)
         )
