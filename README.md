@@ -1,16 +1,29 @@
 Inventory app
 ==================================
 
-Solution code for Android Basics with Compose.
-
 Introduction
 ------------
 
-This app is an Inventory tracking app. Demos how to add, update, sell, and delete items from the local database.
-This app demonstrated the use of Android Jetpack component [Room](https://developer.android.com/training/data-storage/room) database.
+This app is an Inventory tracking app. Add, update, sell, and delete items from the local database.
+This app demonstrated the use of the Android Jetpack component [Room](https://developer.android.com/training/data-storage/room) database.
 The app also leverages [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel),
 [Flow](https://developer.android.com/kotlin/flow),
 and [Navigation](https://developer.android.com/topic/libraries/architecture/navigation/).
+
+## Screenshots
+
+<div style="display:flex;">
+<img alt="App image" src="Screenshot/Screenshot_20230827_212911_Inventory.jpg" width="30%">
+<img alt="App image" src="Screenshot/Screenshot_20230827_212915_Inventory.jpg" width="30%">
+</div>
+
+<div style="display:flex;">
+<img alt="App image" src="Screenshot/Screenshot_20230827_212919_Inventory.jpg" width="30%">
+<img alt="App image" src="Screenshot/Screenshot_20230827_212924_Inventory.jpg" width="30%">
+</div>
+
+
+
 
 Pre-requisites
 --------------
