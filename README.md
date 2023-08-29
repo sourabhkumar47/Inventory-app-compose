@@ -1,7 +1,7 @@
-Inventory app
+Inventory app 🛒
 ==================================
 
-Introduction
+🚀 Introduction
 ------------
 
 This app is an Inventory tracking app. Add, update, sell, and delete items from the local database.
@@ -10,7 +10,7 @@ The app also leverages [ViewModel](https://developer.android.com/topic/libraries
 [Flow](https://developer.android.com/kotlin/flow),
 and [Navigation](https://developer.android.com/topic/libraries/architecture/navigation/).
 
-## Screenshots
+🚀 ## Screenshots
 
 <div style="display:flex;">
 <img alt="App image" src="Screenshot/Screenshot_20230827_212911_Inventory.jpg" width="30%">
@@ -25,7 +25,7 @@ and [Navigation](https://developer.android.com/topic/libraries/architecture/navi
 
 
 
-Pre-requisites
+🚀 Pre-requisites
 --------------
 
 You need to know:
@@ -36,7 +36,7 @@ You need to know:
 - SQLite database and the SQLite query language
 
 
-Getting Started
+🚀 Getting Started
 ---------------
 
 1. Download and run the app.
