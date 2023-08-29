@@ -10,7 +10,9 @@ The app also leverages [ViewModel](https://developer.android.com/topic/libraries
 [Flow](https://developer.android.com/kotlin/flow),
 and [Navigation](https://developer.android.com/topic/libraries/architecture/navigation/).
 
-🚀 # Screenshots
+🚀 Screenshots
+------------
+
 
 <div style="display:flex;">
 <img alt="App image" src="Screenshot/Screenshot_20230827_212911_Inventory.jpg" width="30%">
